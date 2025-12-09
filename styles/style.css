@@ -61,7 +61,8 @@ ol {
   justify-content: center;
   align-items: flex-start;
   gap: 30px;
-  width: 1100px;
+  width: 100%;
+  max-width: 1200px;
   min-height: 534px;
 }
 
@@ -70,13 +71,14 @@ ol {
   flex-direction: column;
   flex-shrink: 0;
   min-width: 711px;
-  margin-top: 211px;
+  position: relative;
+  top: 75px;
 }
 
 .result__video-container {
   position: relative;
   width: 100%;
-  height: 386px;
+  max-height: 386px;
   margin-bottom: 16px;
   overflow: hidden;
   background: #000;
@@ -115,6 +117,7 @@ ol {
 
 .search-form__label {
   display: flex;
+  align-items: center;
   gap: 5px;
   width: fit-content;
 }
@@ -150,8 +153,9 @@ ol {
 .search-form__submit-button {
   flex: 0 0 auto;
   align-self: flex-end;
+  align-self: flex-end;
   width: 194px;
-  height: 34px;
+  min-height: 34px;
   margin-right: 0;
   padding: 10px 18px;
 }
@@ -162,7 +166,6 @@ ol {
   flex: 1 1 auto;
   gap: 24px;
   height: 100%;
-  margin-top: 135px;
   padding-right: 6px;
   padding-left: 0px;
 }
@@ -186,7 +189,7 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  height: 420px;
+  max-height: 298px;
   overflow: auto;
 }
 
@@ -259,6 +262,8 @@ ol {
 
 .content__video-card-description {
   display: -webkit-box;
+  display: -webkit-box;
+  overflow: hidden;
   overflow: hidden;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
@@ -266,6 +271,9 @@ ol {
   font-style: normal;
   line-height: 16.2px;
   letter-spacing: 0;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
 }
 
 .content__video-card-thumbnail {
@@ -280,24 +288,25 @@ ol {
 .button {
   display: inline-block;
   box-sizing: border-box;
+  min-height: 34px;
   border: 1px solid #fff;
   padding: 6px 14px;
   color: #fff;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
   text-decoration: none;
   background: transparent;
   cursor: pointer;
 }
 
-.search-form__submit-button {
-  align-self: flex-end;
-}
-
 .more-button {
   display: block;
   max-width: 100%;
-  max-height: 34px;
   margin: 2px;
 }
 
@@ -306,7 +315,6 @@ ol {
 }
 
 .button:active {
-  color: #fff;
   background-color: #545050;
 }
 
@@ -365,6 +373,7 @@ ol {
 
 .search-form__label:has(.search-form__checkbox:focus-visible) {
   outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .content__card-link,
