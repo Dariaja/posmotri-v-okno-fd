@@ -13,7 +13,7 @@ html {
   justify-content: center;
   align-items: center;
   margin: auto;
-  padding: 133px 0;
+  padding: 133px 30px;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
@@ -63,16 +63,17 @@ ol {
   gap: 30px;
   width: 100%;
   max-width: 1200px;
-  min-height: 534px;
+  max-height: 534px;
 }
 
 .result {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  min-width: 711px;
+  max-width: 711px;
   position: relative;
   top: 75px;
+  
 }
 
 .result__video-container {
@@ -80,7 +81,7 @@ ol {
   width: 100%;
   max-height: 386px;
   margin-bottom: 16px;
-  overflow: hidden;
+  overflow: visible;
   background: #000;
 }
 
@@ -90,6 +91,7 @@ ol {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  
 }
 
 .search-form {
