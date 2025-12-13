@@ -57,13 +57,12 @@ ol {
 }
 
 .content {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: 711px 1fr;
+  column-gap: 30px;
   width: 100%;
   max-width: 1200px;
-  max-height: 534px;
+  min-height: 534px;
 }
 
 .result {
@@ -79,7 +78,7 @@ ol {
 .result__video-container {
   position: relative;
   width: 100%;
-  max-height: 386px;
+  height: 386px;
   margin-bottom: 16px;
   overflow: visible;
   background: #000;
@@ -155,7 +154,6 @@ ol {
 .search-form__submit-button {
   flex: 0 0 auto;
   align-self: flex-end;
-  align-self: flex-end;
   width: 194px;
   min-height: 34px;
   margin-right: 0;
@@ -192,6 +190,7 @@ ol {
   flex-direction: column;
   gap: 30px;
   max-height: 298px;
+  min-width: 390px;
   overflow: auto;
 }
 
@@ -235,15 +234,15 @@ ol {
 }
 
 .content__video-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: 196px 194px;
+  gap: 0;
   align-items: flex-start;
   background: transparent;
 }
 
 .content__video-card-description-container {
-  flex: 1 1 auto;
-  min-width: 0;
-  max-width: 50%;
+  flex-grow: 1;
 }
 
 .content__video-card-title {
@@ -258,14 +257,11 @@ ol {
   letter-spacing: 0;
   text-transform: uppercase;
   text-overflow: ellipsis;
-
   white-space: nowrap;
 }
 
 .content__video-card-description {
   display: -webkit-box;
-  display: -webkit-box;
-  overflow: hidden;
   overflow: hidden;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
@@ -279,12 +275,9 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  display: block;
-  flex-shrink: 0;
   width: 194px;
   height: 103px;
   object-fit: cover;
-  object-position: center;
 }
 
 .button {
